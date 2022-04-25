@@ -1,0 +1,40 @@
+from tkinter import * 
+
+from random import choice
+
+
+
+colors = ['red', 'green', 'yellow']
+
+
+
+top=Tk() 
+
+top.title("Canvas Example 1") 
+
+
+
+C=Canvas(top, bg="blue", height=250, width=400) 
+
+
+
+line=C.create_line(10,10,250,250,fill="red") 
+
+rect=C.create_rectangle(50, 25, 150, 75, fill="red") 
+
+
+
+button1 = Button(top, text = "Change color", anchor = W, command=lambda: C.configure(bg=choice(colors))) 
+
+button1.configure(width = 10, activebackground = "#33B5E5", relief = FLAT) 
+
+
+
+button1_window = C.create_window(10, 10, anchor=NW, window=button1) 
+
+
+
+C.pack() 
+
+top.mainloop
+
