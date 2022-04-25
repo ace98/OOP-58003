@@ -1,0 +1,52 @@
+def fah_c():
+  print('Fahrenheit to Celsius')
+  print('')
+  f = float(input("Enter a value for Fahrenheit : "))
+  c = (f-32) * 5/9
+  print('The Celsius is ',c)
+ 
+def K_C():
+  print('Kelvin to Celsius')
+  print('')
+  K = float(input("Enter a value for Kelvin : "))
+  C = K - 273.15
+  print('The Celsius is ',C)  
+ 
+def c_fah_kel():
+  print('Celsius to Fahrenheit')
+  print('')
+  c = float(input("Enter a value for Celsius : "))
+  fah = (c * 9) / 5 + 32
+  print('The Fahrenheit is ',fah)  
+ 
+def c_kel():
+  print('Celsius to Kelvin')
+  print('')
+  c = float(input("Enter a value for Celsius : "))
+  kel = c + 273.15
+  print('The Kelvin is ',kel)    
+
+def print_menu():
+# Unit Conversion Menu
+ print('1 - Fahrenheit to Celsius')
+ print('2 - Kelvin to Celsius')
+ print('3 - Celsius to Fahrenheit')
+ print('4 - Celsius to Kelvin')
+ print('0 - Exit')
+ print('')
+ choice = input('Which conversion would you like to do? : ')
+ if choice == '1':
+     fah_c()
+ elif choice == '2':
+     K_C()
+ elif choice == '3':
+     c_fah()  
+ elif choice == '3':
+     c_kel()      
+ else:
+     # any key not in choices ends the program
+     print('Unavailable')
+
+
+# start the program by displaying menu
+print_menu()
