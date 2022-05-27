@@ -1,0 +1,59 @@
+from tkinter import *
+app = Tk()
+app.title('Final Exam')
+app.geometry()
+
+def minL():
+  L = []
+  num1 = txt1stNumber.get()
+  num2 = txt2ndNumber.get()
+  num3 = txt3rdNumber.get()
+  num1 = int(num1)
+  L.append(num1)
+  num2 = int(num2)
+  L.append(num2)
+  num3 = int(num3)
+  L.append(num3)
+  ans = str(min(L))
+  
+  lblOutput['text'] = ans
+
+#first number
+frame1stNumber = Frame(master=app)
+frame1stNumber.pack(fill=BOTH)
+lbl1stNumber = Label(frame1stNumber, text='Enter the first number:')
+lbl1stNumber.pack(side=LEFT)
+txt1stNumber = Entry(frame1stNumber)
+txt1stNumber.pack(side=LEFT)
+
+#second number
+frame2ndNumber = Frame(master=app)
+frame2ndNumber.pack(fill=BOTH)
+lbl2ndNumber = Label(frame2ndNumber, text='Enter the second number:')
+lbl2ndNumber.pack(side=LEFT)
+txt2ndNumber = Entry(frame2ndNumber)
+txt2ndNumber.pack(side=LEFT)
+
+#third number
+frame3rdNumber = Frame(master=app)
+frame3rdNumber.pack(fill=BOTH)
+lbl3rdNumber = Label(frame3rdNumber, text='Enter the third number:')
+lbl3rdNumber.pack(side=LEFT)
+txt3rdNumber = Entry(frame3rdNumber)
+txt3rdNumber.pack(side=LEFT)
+
+#ok button to print to show the minimum
+framebutton = Frame(master=app)
+framebutton.pack(fill=BOTH)
+btnAdd=Button(framebutton, text="OK", command=minL)
+btnAdd.pack(side=LEFT)
+
+#print the minimum
+frameAnswer = Frame(master=app)
+frameAnswer.pack(fill=BOTH)
+lblAnswer = Label(master=frameAnswer, text='The smallest number among the three is: ')
+lblAnswer.pack(side=LEFT)
+lblOutput = Label(master=frameAnswer)
+lblOutput.pack(side=LEFT)
+
+app.mainloop()
